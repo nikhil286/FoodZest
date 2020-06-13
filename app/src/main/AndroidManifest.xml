@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.furiouspanda.foodzest">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/foodzest_icon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/foodzest_icon_round"
+        android:supportsRtl="true"
+        android:resizeableActivity="false"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="stateHidden">
+        <activity android:name="com.furiouspanda.foodzest.activity.OrderPlacedActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name="com.furiouspanda.foodzest.activity.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name="com.furiouspanda.foodzest.activity.OrderHistoryActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.furiouspanda.foodzest.activity.CartActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.furiouspanda.foodzest.activity.RestaurantMenuActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.furiouspanda.foodzest.activity.Dashboard"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.furiouspanda.foodzest.activity.LoginRegisterActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.furiouspanda.foodzest.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

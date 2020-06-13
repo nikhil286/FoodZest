@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:layout_margin="4dp"
+    android:background="@color/white"
+    app:cardCornerRadius="6dp">
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <ImageView
+            android:id="@+id/imgRestaurant"
+            android:layout_width="40dp"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1.3"
+            android:padding="6dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_image_restaurant" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.6"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtRestaurantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:text="Pind Tadka"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtRestaurantName"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:drawableStart="@drawable/ic_rupee"
+                android:padding="6dp"
+                android:text="300/person"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1">
+
+            <TextView
+                android:id="@+id/txtFavorite"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/ic_fav_outline"
+                android:tag="unliked" />
+
+            <TextView
+                android:id="@+id/txtRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtFavorite"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:drawablePadding="4dp"
+                android:padding="4dp"
+                android:text="4.5"
+                android:textColor="#ffc107"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
